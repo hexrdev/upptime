@@ -1,36 +1,98 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Hexr Runtime Status Page
+# https://status.hexr.cloud
+owner: hexrdev
+repo: upptime
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  # --- Public Endpoints ---
+  - name: Cloud API
+    url: https://api.hexr.cloud/health
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+
+  - name: Dashboard
+    url: https://app.hexr.cloud
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+      - 301
+      - 302
+
+  - name: OIDC Discovery
+    url: https://oidc.hexr.cloud/.well-known/openid-configuration
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+
+  - name: Documentation
+    url: https://docs.hexr.dev
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+
+  - name: Landing Page
+    url: https://hexr.dev
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+
+  # --- Runtime Services (external health endpoints) ---
+  - name: Hexr Gateway
+    url: https://api.hexr.cloud/gateway/health
+    expectedStatusCodes:
+      - 200
+      - 404
+
+  - name: Hexr Vault
+    url: https://api.hexr.cloud/vault/health
+    expectedStatusCodes:
+      - 200
+      - 404
+
+  - name: Credential Injector
+    url: https://api.hexr.cloud/cred-injector/health
+    expectedStatusCodes:
+      - 200
+      - 404
+
+  # --- Observability ---
+  - name: Grafana
+    url: https://api.hexr.cloud/grafana/api/health
+    expectedStatusCodes:
+      - 200
+      - 302
+      - 404
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.hexr.cloud
+  logoUrl: https://hexr.dev/favicon.ico
+  name: Hexr Status
+  theme: dark
+  introTitle: "**Hexr** Runtime Status"
+  introMessage: "Real-time health monitoring for the Hexr AI agent runtime platform. All checks run every 5 minutes via GitHub Actions."
   navbar:
     - title: Status
       href: /
+    - title: Hexr Cloud
+      href: https://app.hexr.cloud
+    - title: Documentation
+      href: https://docs.hexr.dev
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+i18n:
+  activeIncidents: Current Incidents
+  pastIncidents: Past Incidents
+  pastIncidentsResolved: Resolved
+  allSystemsOperational: All Systems Operational
+  incidentReport: Incident Report
+
+workflowSchedule:
+  graphs: "0 0 * * *"
+  responseTime: "0 23 * * *"
+  staticSite: "0 1 * * *"
+  summary: "0 0 * * *"
+  updateTemplate: "0 0 * * *"
+  updates: "*/5 * * * *"
+  uptime: "*/5 * * * *"
