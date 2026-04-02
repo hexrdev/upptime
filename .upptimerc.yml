@@ -6,7 +6,7 @@ repo: upptime
 sites:
   # --- Public Endpoints ---
   - name: Cloud API
-    url: https://api.hexr.cloud/health
+    url: https://api.hexr.cloud/healthz
     icon: https://hexr.dev/favicon.ico
     expectedStatusCodes:
       - 200
@@ -25,44 +25,11 @@ sites:
     expectedStatusCodes:
       - 200
 
-  - name: Documentation
-    url: https://docs.hexr.dev
-    icon: https://hexr.dev/favicon.ico
-    expectedStatusCodes:
-      - 200
-
   - name: Landing Page
     url: https://hexr.dev
     icon: https://hexr.dev/favicon.ico
     expectedStatusCodes:
       - 200
-
-  # --- Runtime Services (external health endpoints) ---
-  - name: Hexr Gateway
-    url: https://api.hexr.cloud/gateway/health
-    expectedStatusCodes:
-      - 200
-      - 404
-
-  - name: Hexr Vault
-    url: https://api.hexr.cloud/vault/health
-    expectedStatusCodes:
-      - 200
-      - 404
-
-  - name: Credential Injector
-    url: https://api.hexr.cloud/cred-injector/health
-    expectedStatusCodes:
-      - 200
-      - 404
-
-  # --- Observability ---
-  - name: Grafana
-    url: https://api.hexr.cloud/grafana/api/health
-    expectedStatusCodes:
-      - 200
-      - 302
-      - 404
 
 status-website:
   cname: status.hexr.cloud
