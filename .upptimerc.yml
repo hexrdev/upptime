@@ -25,6 +25,12 @@ sites:
     expectedStatusCodes:
       - 200
 
+  - name: Documentation
+    url: https://docs.hexr.dev
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+
   - name: Landing Page
     url: https://hexr.dev
     icon: https://hexr.dev/favicon.ico
