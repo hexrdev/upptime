@@ -25,14 +25,14 @@
     "icon": "https://hexr.dev/favicon.ico",
     "slug": "dashboard",
     "status": "up",
-    "uptime": "99.80%",
+    "uptime": "99.81%",
     "uptimeDay": "100.00%",
-    "uptimeWeek": "99.62%",
-    "uptimeMonth": "99.80%",
-    "uptimeYear": "99.80%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "99.81%",
+    "uptimeYear": "99.81%",
     "time": 290,
     "timeDay": 282,
-    "timeWeek": 287,
+    "timeWeek": 300,
     "timeMonth": 290,
     "timeYear": 290,
     "dailyMinutesDown": {
@@ -63,11 +63,11 @@
     "icon": "https://hexr.dev/favicon.ico",
     "slug": "documentation",
     "status": "up",
-    "uptime": "98.06%",
+    "uptime": "98.16%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "98.06%",
-    "uptimeYear": "98.06%",
+    "uptimeMonth": "98.16%",
+    "uptimeYear": "98.16%",
     "time": 256,
     "timeDay": 289,
     "timeWeek": 304,
@@ -83,7 +83,7 @@
     "url": "https://hexr.dev",
     "icon": "https://hexr.dev/favicon.ico",
     "slug": "landing-page",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
@@ -94,6 +94,8 @@
     "timeWeek": 643,
     "timeMonth": 801,
     "timeYear": 801,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-04-16": 0
+    }
   }
 ]
