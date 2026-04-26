@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.94%",
     "uptimeYear": "99.94%",
-    "time": 366,
-    "timeDay": 250,
+    "time": 362,
+    "timeDay": 276,
     "timeWeek": 227,
-    "timeMonth": 366,
-    "timeYear": 366,
+    "timeMonth": 362,
+    "timeYear": 362,
     "dailyMinutesDown": {
       "2026-04-02": 20
     }
@@ -30,11 +30,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.88%",
     "uptimeYear": "99.88%",
-    "time": 314,
-    "timeDay": 362,
-    "timeWeek": 351,
-    "timeMonth": 314,
-    "timeYear": 314,
+    "time": 315,
+    "timeDay": 333,
+    "timeWeek": 328,
+    "timeMonth": 315,
+    "timeYear": 315,
     "dailyMinutesDown": {
       "2026-04-09": 39
     }
@@ -50,11 +50,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 165,
-    "timeDay": 136,
-    "timeWeek": 169,
-    "timeMonth": 165,
-    "timeYear": 165,
+    "time": 164,
+    "timeDay": 157,
+    "timeWeek": 164,
+    "timeMonth": 164,
+    "timeYear": 164,
     "dailyMinutesDown": {}
   },
   {
@@ -63,16 +63,16 @@
     "icon": "https://hexr.dev/favicon.ico",
     "slug": "documentation",
     "status": "up",
-    "uptime": "98.85%",
+    "uptime": "98.90%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "98.85%",
-    "uptimeYear": "98.85%",
-    "time": 368,
-    "timeDay": 1275,
-    "timeWeek": 586,
-    "timeMonth": 368,
-    "timeYear": 368,
+    "uptimeMonth": "98.90%",
+    "uptimeYear": "98.90%",
+    "time": 376,
+    "timeDay": 564,
+    "timeWeek": 602,
+    "timeMonth": 376,
+    "timeYear": 376,
     "dailyMinutesDown": {
       "2026-04-03": 227,
       "2026-04-02": 140
@@ -89,11 +89,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.90%",
     "uptimeYear": "99.90%",
-    "time": 1103,
-    "timeDay": 2091,
-    "timeWeek": 1837,
-    "timeMonth": 1103,
-    "timeYear": 1103,
+    "time": 1130,
+    "timeDay": 1795,
+    "timeWeek": 1969,
+    "timeMonth": 1130,
+    "timeYear": 1130,
     "dailyMinutesDown": {
       "2026-04-16": 33
     }
