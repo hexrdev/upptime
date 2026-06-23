@@ -11,20 +11,6 @@ sites:
     expectedStatusCodes:
       - 200
 
-  - name: Dashboard
-    url: https://app.hexr.cloud
-    icon: https://hexr.dev/favicon.ico
-    expectedStatusCodes:
-      - 200
-      - 301
-      - 302
-
-  - name: OIDC Discovery
-    url: https://oidc.hexr.cloud/.well-known/openid-configuration
-    icon: https://hexr.dev/favicon.ico
-    expectedStatusCodes:
-      - 200
-
   - name: Documentation
     url: https://docs.hexr.dev
     icon: https://hexr.dev/favicon.ico
@@ -47,8 +33,8 @@ status-website:
   navbar:
     - title: Status
       href: /
-    - title: Hexr Cloud
-      href: https://app.hexr.cloud
+    - title: hexr.dev
+      href: https://hexr.dev
     - title: Documentation
       href: https://docs.hexr.dev
     - title: GitHub
