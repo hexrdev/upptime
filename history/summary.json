@@ -4,17 +4,17 @@
     "url": "https://api.hexr.cloud/healthz",
     "icon": "https://hexr.dev/favicon.ico",
     "slug": "cloud-api",
-    "status": "down",
-    "uptime": "91.07%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "91.07%",
-    "time": 2334,
-    "timeDay": 117,
-    "timeWeek": 99,
-    "timeMonth": 101,
-    "timeYear": 2334,
+    "status": "up",
+    "uptime": "91.06%",
+    "uptimeDay": "98.88%",
+    "uptimeWeek": "99.84%",
+    "uptimeMonth": "99.96%",
+    "uptimeYear": "91.06%",
+    "time": 2318,
+    "timeDay": 104,
+    "timeWeek": 97,
+    "timeMonth": 100,
+    "timeYear": 2318,
     "dailyMinutesDown": {
       "2026-04-02": 20,
       "2026-05-12": 1087,
@@ -31,7 +31,7 @@
       "2026-05-19": 379,
       "2026-05-18": 1440,
       "2026-05-17": 864,
-      "2026-08-18": 0
+      "2026-08-18": 16
     }
   },
   {
