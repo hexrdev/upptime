@@ -23,6 +23,49 @@ sites:
     expectedStatusCodes:
       - 200
 
+  # --- Identity plane -------------------------------------------------------
+  # Added 2026-09-27 after a 22-hour outage that none of the three checks above
+  # could see. A Helm upgrade dropped the OIDC Ingress host, so the issuer in
+  # every JWT-SVID stopped resolving and GCP refused every cross-cloud
+  # credential exchange for a tenant. api.hexr.cloud, docs and the landing page
+  # stayed green throughout, because none of them touch the identity plane.
+  #
+  # These check the contract that actually broke: the issuer serves its own
+  # discovery document. One per trust domain — the hostname differs per plane
+  # and must match the `iss` claim SPIRE stamps, so a single check cannot cover
+  # both.
+  - name: OIDC Issuer (EKS)
+    url: https://oidc.hexr.dev/.well-known/openid-configuration
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+
+  - name: OIDC Issuer (AKS globex-azure)
+    url: https://oidc-globex-azure.hexr.dev/.well-known/openid-configuration
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+
+  # --- Dashboards -----------------------------------------------------------
+  # /login rather than /, because / is a 307 redirect to it.
+  - name: Control Plane Dashboard
+    url: https://cp.hexr.cloud/login
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+
+  - name: Data Plane Dashboard (EKS)
+    url: https://dp-demo.hexr.cloud/login
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+
+  - name: Data Plane Dashboard (AKS)
+    url: https://dp-globex.hexr.cloud/login
+    icon: https://hexr.dev/favicon.ico
+    expectedStatusCodes:
+      - 200
+
 status-website:
   cname: status.hexr.cloud
   logoUrl: https://hexr.dev/favicon.ico
