@@ -5,15 +5,15 @@
     "icon": "https://hexr.dev/favicon.ico",
     "slug": "cloud-api",
     "status": "up",
-    "uptime": "93.00%",
+    "uptime": "93.04%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "93.00%",
+    "uptimeYear": "93.04%",
     "time": 2136,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 115,
+    "timeMonth": 124,
     "timeYear": 2136,
     "dailyMinutesDown": {
       "2026-04-02": 20,
@@ -48,7 +48,7 @@
     "time": 517,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 784,
+    "timeMonth": 821,
     "timeYear": 517,
     "dailyMinutesDown": {
       "2026-04-03": 227,
@@ -69,7 +69,7 @@
     "time": 1600,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 1786,
+    "timeMonth": 1778,
     "timeYear": 1600,
     "dailyMinutesDown": {
       "2026-04-16": 33
