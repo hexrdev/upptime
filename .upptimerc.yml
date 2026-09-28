@@ -5,19 +5,19 @@ repo: upptime
 
 sites:
   # --- Public Endpoints ---
-  - name: Cloud API
+  - name: Control Plane — API
     url: https://api.hexr.cloud/healthz
     icon: https://hexr.dev/favicon.ico
     expectedStatusCodes:
       - 200
 
-  - name: Documentation
+  - name: Docs Site
     url: https://docs.hexr.dev
     icon: https://hexr.dev/favicon.ico
     expectedStatusCodes:
       - 200
 
-  - name: Landing Page
+  - name: Marketing Site
     url: https://hexr.dev
     icon: https://hexr.dev/favicon.ico
     expectedStatusCodes:
@@ -34,13 +34,13 @@ sites:
   # discovery document. One per trust domain — the hostname differs per plane
   # and must match the `iss` claim SPIRE stamps, so a single check cannot cover
   # both.
-  - name: OIDC Issuer (EKS)
+  - name: Data Plane EKS — Identity Issuer
     url: https://oidc.hexr.dev/.well-known/openid-configuration
     icon: https://hexr.dev/favicon.ico
     expectedStatusCodes:
       - 200
 
-  - name: OIDC Issuer (AKS globex-azure)
+  - name: Data Plane AKS — Identity Issuer
     url: https://oidc-globex-azure.hexr.dev/.well-known/openid-configuration
     icon: https://hexr.dev/favicon.ico
     expectedStatusCodes:
@@ -48,19 +48,19 @@ sites:
 
   # --- Dashboards -----------------------------------------------------------
   # /login rather than /, because / is a 307 redirect to it.
-  - name: Control Plane Dashboard
+  - name: Control Plane — Dashboard
     url: https://cp.hexr.cloud/login
     icon: https://hexr.dev/favicon.ico
     expectedStatusCodes:
       - 200
 
-  - name: Data Plane Dashboard (EKS)
+  - name: Data Plane EKS — Dashboard
     url: https://dp-demo.hexr.cloud/login
     icon: https://hexr.dev/favicon.ico
     expectedStatusCodes:
       - 200
 
-  - name: Data Plane Dashboard (AKS)
+  - name: Data Plane AKS — Dashboard
     url: https://dp-globex.hexr.cloud/login
     icon: https://hexr.dev/favicon.ico
     expectedStatusCodes:
@@ -72,7 +72,7 @@ status-website:
   name: Hexr Status
   theme: dark
   introTitle: "**Hexr** Runtime Status"
-  introMessage: "Real-time health monitoring for the Hexr AI agent runtime platform. All checks run every 5 minutes via GitHub Actions."
+  introMessage: "Hexr runs one **control plane** (licensing, tenant admin) and one **data plane per customer cluster** (identity, evidence, credentials). Checks below are grouped that way. \"hexr.cloud\" hostnames are the control plane; agent identity is issued per data plane. All checks run every 5 minutes via GitHub Actions."
   navbar:
     - title: Status
       href: /
