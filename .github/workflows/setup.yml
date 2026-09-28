@@ -44,7 +44,14 @@ jobs:
           command: "response-time"
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}
+          # SECRETS_CONTEXT: ${{ toJson(secrets) }} removed 2026-09-27.
+          # GitHub refuses to start any workflow that dumps the whole secrets
+          # context this way: the run is created, zero jobs are scheduled, and
+          # it is marked action_required forever. Every Uptime CI run for the
+          # last month died exactly there, which is why status.hexr.cloud froze
+          # on 2026-08-30 data while still calling itself real-time.
+          # Upptime only needs this to expand $SECRET references inside
+          # .upptimerc.yml; all eight checks are public URLs, so nothing needs it.
       - name: Update summary in README
         uses: upptime/uptime-monitor@v1.43.0
         with:
