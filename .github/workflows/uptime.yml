@@ -17,7 +17,20 @@
 name: Uptime CI
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    # Every 15 minutes, not every 5.
+    #
+    # At */5 this is 288 runs a day and 8,640 a month, which is what exhausted
+    # the Actions budget on 2026-09-29. It is also the blast radius when
+    # something breaks: between 2026-08-30 and 2026-09-29 every one of those
+    # runs failed on SECRETS_CONTEXT, which is roughly 8,000 failure emails for
+    # a single root cause, and 447 failed runs left in history.
+    #
+    # 15 minutes detects an outage within 15 minutes and costs a third as much.
+    # For a public status page that is the right trade — the fast signal for
+    # our own planes is scripts/check-oidc-issuer.sh and check-rollouts.sh in
+    # the hexr repo, which are run on demand and check contracts rather than
+    # liveness.
+    - cron: "*/15 * * * *"
   repository_dispatch:
     types: [uptime]
   workflow_dispatch:
