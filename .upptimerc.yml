@@ -90,11 +90,28 @@ i18n:
   allSystemsOperational: All Systems Operational
   incidentReport: Incident Report
 
+# Kept in step with .github/workflows/*.yml, by hand.
+#
+# Upptime regenerates those files from this block, so changing one without the
+# other means the next template run silently reverts it. All three workflows
+# that can do that regeneration are disabled: Updates CI, Update Template CI
+# and Setup CI. They are disabled for one reason — the upstream template still
+# ships SECRETS_CONTEXT, and restoring it stops every uptime check from
+# running while the status page keeps serving its last snapshot.
+#
+# Setup CI is the easy one to miss: it triggers on a push to THIS file, so
+# editing schedules here is precisely what would have reinstated the bug.
+# See .github/workflows/guard-secrets-context.yml, which fails loudly if it
+# ever comes back.
 workflowSchedule:
   graphs: "0 0 * * *"
   responseTime: "0 23 * * *"
   staticSite: "0 1 * * *"
   summary: "0 0 * * *"
   updateTemplate: "0 0 * * *"
-  updates: "*/5 * * * *"
-  uptime: "*/5 * * * *"
+  updates: "*/15 * * * *"
+  # 15 minutes, not 5. At */5 this was 288 runs a day and 8,640 a month, which
+  # exhausted the Actions budget on 2026-09-29, and it is the blast radius when
+  # something breaks: every run between 2026-08-30 and 2026-09-29 failed on
+  # SECRETS_CONTEXT, roughly 8,000 failure emails for one root cause.
+  uptime: "*/15 * * * *"
