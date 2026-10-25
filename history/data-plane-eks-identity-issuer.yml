@@ -1,7 +1,7 @@
 url: https://oidc.hexr.dev/.well-known/openid-configuration
 status: up
 code: 200
-responseTime: 303
-lastUpdated: 2026-10-24T23:03:48.492Z
+responseTime: 172
+lastUpdated: 2026-10-25T23:03:53.580Z
 startTime: 2026-09-28T01:23:42.651Z
 generator: Upptime <https://github.com/upptime/upptime>
