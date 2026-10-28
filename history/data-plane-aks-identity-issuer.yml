@@ -1,7 +1,7 @@
 url: https://oidc-globex-azure.hexr.dev/.well-known/openid-configuration
 status: up
 code: 200
-responseTime: 268
-lastUpdated: 2026-10-27T23:03:06.179Z
+responseTime: 262
+lastUpdated: 2026-10-28T23:03:05.110Z
 startTime: 2026-09-28T01:23:43.016Z
 generator: Upptime <https://github.com/upptime/upptime>
